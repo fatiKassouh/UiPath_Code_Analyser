@@ -1,0 +1,178 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GestionLogMessage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_file" Type="InArgument(x:String)" />
+    <x:Property Name="in_DestFolder" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>924,1345</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GestionLogMessage" sap:VirtualizedContainerService.HintSize="376,1180" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_LogMessage" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5" xml:space="preserve">"   =&gt;debut workflow Gestion des Log Messages"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Workflow&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Activity_x0020_name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Action&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;idref&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">DT_LogMessage</mca:CSharpReference>
+        </OutArgument>
+      </ui:BuildDataTable.DataTable>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;string path=in_FilePath;&#xD;&#xA;Console.WriteLine(in_FilePath);&#xD;&#xA;DataTable temp=io_Dt;&#xD;&#xA;StreamReader sr = new StreamReader(path);&#xD;&#xA;string xmlText = sr.ReadToEnd();&#xD;&#xA;sr.Close();&#xD;&#xA;XDocument xDoc = XDocument.Parse(xmlText);&#xD;&#xA;XNamespace xNameSpace = &quot;http://schemas.uipath.com/workflow/activities&quot;;&#xD;&#xA;xDoc.Descendants(xNameSpace + &quot;LogMessage&quot;)&#xD;&#xA;    .Where(p =&gt; p.Attribute(&quot;Level&quot;) == null || &#xD;&#xA;                p.Attribute(&quot;Level&quot;).Value == &quot;Fatal&quot; || p.Attribute(&quot;Level&quot;).Value == &quot;Trace&quot;)&#xD;&#xA;   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9; .ToList()&#xD;&#xA;                         .ForEach(e =&gt; {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;//lineNumber = ((IXmlLineInfo)e).HasLineInfo() ? ((IXmlLineInfo)e).LineNumber : -1;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DataRow dr = temp.NewRow();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[0]=path;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;dr[1]=e.Name.LocalName;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;try&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]= &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;e.Attribute(&quot;DisplayName&quot;).Value ;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (Exception ex)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]=e.Name.LocalName;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;//dr[2]=e.Attribute(&quot;WaitForReady&quot;).Value;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[3]=&quot; Log Level absent ou egale à 'Trace' ou 'Fatal' &quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; temp.Rows.Add(dr);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; });&#xD;&#xA;io_Dt=temp;&#xD;&#xA;xDoc.Save(path);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" DisplayName="Invoke code gestion du log level" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_file</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">DT_LogMessage</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="try{&#xD;&#xA;string path = in_FilePath;&#xD;&#xA;string fileName = path.Substring(path.LastIndexOf('\\') + 1);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;// Get the default namespaces for the .xaml file&#xD;&#xA;XNamespace ns =&quot;http://schemas.microsoft.com/netfx/2009/xaml/activities&quot;;&#xD;&#xA;XNamespace sap = &quot;http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation&quot;;&#xD;&#xA;XNamespace scg = &quot;clr-namespace:System.Collections.Generic;assembly=mscorlib&quot;;&#xD;&#xA;XNamespace x = &quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;;&#xD;&#xA;&#xD;&#xA;DataTable temp = io_Dt;&#xD;&#xA;&#x9;&#xD;&#xA;if(fileName!= &quot;Main.xaml&quot; &amp;&amp; fileName!= &quot;Process.xaml&quot;){&#xD;&#xA;&#xD;&#xA;&#x9;XDocument xDoc = XDocument.Load(path);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;//getting parent sequence .xaml&#xD;&#xA;&#x9;XElement sequence = xDoc.Descendants(ns + &quot;Sequence&quot;).FirstOrDefault();&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;XElement viewState = sequence.Descendants(sap + &quot;WorkflowViewStateService.ViewState&quot;).FirstOrDefault();&#xD;&#xA;    XElement firstActivityAfterViewState = viewState.ElementsAfterSelf().FirstOrDefault();&#xD;&#xA;&#x9;Console.WriteLine(&quot;********first*********&quot;+firstActivityAfterViewState.Name.ToString());&#xD;&#xA;&#x9;//XElement firstActivityAfterViewState = sequence.Elements().FirstOrDefault();&#xD;&#xA;    XElement lastActivity = sequence.Elements().LastOrDefault();&#xD;&#xA;&#x9;Console.WriteLine(&quot;***********Last******&quot;+lastActivity.Name.ToString());&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;       &#x9;&#x9; if(((firstActivityAfterViewState != null )&amp;&amp; (firstActivityAfterViewState.Name.LocalName != &quot;LogMessage&quot;)) &amp;&amp; (lastActivity == null || lastActivity.Name.LocalName != &quot;LogMessage&quot;)) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;DataRow dr = temp.NewRow();&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&#x9;dr[0] = path;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[2] = sequence.Attribute(&quot;DisplayName&quot;).Value;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[1] = &quot;LogMessage&quot;;&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&#x9;dr[3] = &quot;Vous devez commencer et terminer votre Workflow avec un log message&quot;;&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&#x9;temp.Rows.Add(dr);&#xD;&#xA;&#x9;&#x9;        }&#xD;&#xA;&#x9;&#x9;&#x9;else if (lastActivity == null || lastActivity.Name.LocalName != &quot;LogMessage&quot;) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;DataRow dr = temp.NewRow();&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;dr[0] = path;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[2] = sequence.Attribute(&quot;DisplayName&quot;).Value;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[1] = &quot;LogMessage&quot;;&#xD;&#xA;&#x9;&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;dr[3] = &quot;Vous devez terminer votre Workflow avec un log message&quot;;&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;temp.Rows.Add(dr);&#xD;&#xA;        }&#xD;&#xA;&#x9;&#x9;&#x9;else if ((firstActivityAfterViewState != null )&amp;&amp; (firstActivityAfterViewState.Name.LocalName != &quot;LogMessage&quot;)) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;DataRow dr = temp.NewRow();&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;dr[0] = path;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[2] =  sequence.Attribute(&quot;DisplayName&quot;).Value;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[1] = &quot;LogMessage&quot;;&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;dr[3] = &quot;Vous devez commencer votre Workflow avec un log message&quot;;&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;temp.Rows.Add(dr);&#xD;&#xA;        }&#xD;&#xA;     &#x9;   else&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;         &#x9;&#x9;  Console.WriteLine(&quot;Well done !Vous avec commencer votre Workflow avec un log message&quot;);&#xD;&#xA;        }&#xD;&#xA;    &#xD;&#xA;&#xD;&#xA;// Enregistrer les modifications apportées à la DataTable et au fichier XAML&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;io_Dt = temp;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;xDoc.Save(path);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;}catch (Exception e){&#xD;&#xA;    Console.WriteLine(e.Message.ToString());&#xD;&#xA;}&#xD;&#xA;&#x9;" DisplayName="Invoke code gestion first and last log message" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_file</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">DT_LogMessage</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="string path=in_FilePath;&#xA;DataTable temp=io_Dt;&#xA;&#xA;StreamReader sr = new StreamReader(path);&#xA;string xmlText = sr.ReadToEnd();&#xA;sr.Close();&#xA;XDocument xDoc = XDocument.Parse(xmlText);&#xA;&#xA;XNamespace ns = &quot;http://schemas.microsoft.com/winfx/2006/xaml/workflow&quot;;&#xA;&#xA;// Get the namespaces used In the XAML file&#xA;XNamespace sap = xDoc.Root.GetNamespaceOfPrefix(&quot;sap&quot;);&#xA;XNamespace sap2010 = xDoc.Root.GetNamespaceOfPrefix(&quot;sap2010&quot;);&#xA; XNamespace ui = xDoc.Root.GetNamespaceOfPrefix(&quot;ui&quot;);&#xA;String action=&quot;Writeline Activité doit etre supprimer ou remplacer par un log message&quot;;&#xA;&#xA;//Get Existing Writeline Activities&#xA;xDoc.Descendants()&#xA;       &#x9;&#x9;&#x9; .Where(x =&gt; x.Name.LocalName ==in_xName)&#xA;       &#x9;&#x9;&#x9; .ToList()                            &#xA;&#x9;&#x9;&#x9;&#x9;.ForEach(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;activity =&gt; {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;action=&quot;Writeline Activité doit etre supprimer ou remplacer par un log message&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DataRow dr = temp.NewRow();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[0]=path;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[1]=activity.Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]= &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;activity.Attribute(&quot;DisplayName&quot;).Value ;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (Exception ex)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]=activity.Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[3]=action;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;temp.Rows.Add(dr);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;});&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#xA;/**/&#xA;io_Dt=temp;&#xA;xDoc.Save(path);" DisplayName="Invoke code Write line " sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_xName">WriteLine</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_file</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">DT_LogMessage</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:AppendRange DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Gestion Log Message">
+      <ui:AppendRange.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">DT_LogMessage</mca:CSharpValue>
+        </InArgument>
+      </ui:AppendRange.DataTable>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:AppendRange.WorkbookPath>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_DestFolder+"\\Report Code Review.xlsx"</mca:CSharpValue>
+        </InArgument>
+      </ui:AppendRange.WorkbookPath>
+    </ui:AppendRange>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6" xml:space="preserve">"   =&gt;Fin workflow Gestion des Log Messages"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>

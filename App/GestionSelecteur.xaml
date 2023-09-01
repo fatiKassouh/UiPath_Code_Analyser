@@ -1,0 +1,228 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GestionSelecteur" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_file" Type="InArgument(x:String)" />
+    <x:Property Name="in_DestFolder" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>924,1702</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GestionSelecteur" sap:VirtualizedContainerService.HintSize="376,1537" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DTGestionSelecteur" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1" xml:space="preserve">"   =&gt;debut workflow Gestion de variable"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Workflow&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Nom&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Action&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;idref&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">DTGestionSelecteur</mca:CSharpReference>
+        </OutArgument>
+      </ui:BuildDataTable.DataTable>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5" xml:space="preserve">"      =&gt;debut invoke code WaitForReadyComplete"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="/*****************WaitForReady Complete*************/&#xA;&#xA;string path = in_FilePath;&#xA;DataTable temp = io_Dt;&#xA;&#xA;&#xA;/** Read Selected File ***/&#xA;StreamReader sr = new StreamReader(path);&#xA;string xmlText = sr.ReadToEnd();&#xA;/*** Close File***/&#xA;sr.Close();&#xA;&#xA;&#xA;/*** Parse xaml file to XML***/&#xA;XDocument xDoc = XDocument.Parse(xmlText);&#xA;// Assign the namespaces used In the XAML file&#xA;XNamespace xNameSpace = &quot;http://schemas.uipath.com/workflow/activities&quot;;&#xA;XNamespace sap2010 = &quot;http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation&quot;;&#xA;&#xA;// Get Selectors of activities that don't have the WaitForReady property or NOT equals to complete &#xA;xDoc.Descendants()&#xA;&#x9;    .Elements()&#xA;&#x9;    .Where(&#xA;&#x9;&#x9;&#x9;&#x9;        p =&gt;&#xA;&#x9;&#x9;&#x9;&#x9;            p.Attribute(&quot;Selector&quot;) != null &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;&amp; ( p.Attribute(&quot;WaitForReady&quot;) == null &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;|| ( p.Attribute(&quot;WaitForReady&quot;) != null &amp;&amp; string.Compare(p.Attribute(&quot;WaitForReady&quot;).Value.ToString().ToLower(),&quot;complete&quot;) != 0)&#xA;&#x9;&#x9;&#x9;&#x9;            &#x9;&#x9;&#x9;)&#xA;&#x9;   &#x9; &#x9;&#x9;&#x9;)&#xA;&#x9;    &#x9;&#x9;&#x9;.ToList()&#xA;&#x9;    &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.ForEach(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        e =&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            //Assign found activities to DataRow&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            DataRow dr = temp.NewRow();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[0] = path;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[1] =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                e.AncestorsAndSelf() // Get the name of the activity&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .Where(x =&gt; x.Attribute(&quot;DisplayName&quot;) != null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .First().Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]= e.Parent.Attribute(&quot;DisplayName&quot;).Value!=null ?&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;e.Parent.Attribute(&quot;DisplayName&quot;).Value : e.Parent.Parent.Attribute(&quot;DisplayName&quot;).Value&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   ;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (Exception ex)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]=e.AncestorsAndSelf() // Get the name of the activity&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .Where(x =&gt; x.Attribute(&quot;DisplayName&quot;) != null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .First().Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[3] = &quot;propriete WaitForReady  absente ou differente de complete &quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;XElement currentElement = e;&#xA;&#x9;XAttribute idrefAttr = null;&#xA;&#x9;&#x9;while (currentElement != null)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;    idrefAttr = currentElement.Attribute(sap2010 + &quot;WorkflowViewState.IdRef&quot;);&#xA;&#x9;&#x9;    if (idrefAttr != null)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;        break;&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;    currentElement = currentElement.Parent;&#xA;&#x9;&#x9;}&#x9;&#x9;&#xA;&#x9;&#x9;if (idrefAttr != null)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;    string idrefValue = idrefAttr.Value;&#x9;    &#xA;&#x9;&#x9;    dr[4] = idrefValue;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            temp.Rows.Add(dr);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        });&#xA;&#xA;/**Assign modified DataTable**/&#xA;io_Dt = temp;&#xA;&#xA;/**Save File**/&#xA;xDoc.Save(path);&#xA;&#xA;&#xA;" DisplayName="Invoke code WaitForReadyComplete" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_file</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">DTGestionSelecteur</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14" xml:space="preserve">"      =&gt;debut invoke code Simulate/sendwindows"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="/*****************Simulate Property*************/&#xD;&#xA;&#xD;&#xA;string path = in_FilePath;&#xD;&#xA;DataTable temp = io_Dt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;/** Read Selected File ***/&#xD;&#xA;StreamReader sr = new StreamReader(path);&#xD;&#xA;string xmlText = sr.ReadToEnd();&#xD;&#xA;/*** Close File***/&#xD;&#xA;sr.Close();&#xD;&#xA;&#xD;&#xA;/*** Parse xaml file to XML***/&#xD;&#xA;XDocument xDoc = XDocument.Parse(xmlText);&#xD;&#xA;// Assign the namespaces used In the XAML file&#xD;&#xA;XNamespace xNameSpace = &quot;http://schemas.uipath.com/workflow/activities&quot;;&#xD;&#xA;XNamespace sap2010 = &quot;http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation&quot;;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;/****************************** Get Click Activities that have SimulateType not set to True***************************/&#xD;&#xA;try{&#xD;&#xA;&#x9;&#x9;xDoc.Descendants(xNameSpace+&quot;Click&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;    .Where&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;        p =&gt;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(p.Attribute(&quot;SendWindowMessages&quot;) != null &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;&amp; (string.Compare(p.Attribute(&quot;SendWindowMessages&quot;).Value.ToString().ToLower(), &quot;true&quot; ) != 0)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;) &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;|| (p.Attribute(&quot;SimulateClick&quot;) != null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;&amp; (string.Compare(p.Attribute(&quot;SimulateClick&quot;).Value.ToString().ToLower(), &quot;true&quot;) != 0)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;)&#xD;&#xA;&#x9;&#x9;&#x9;    )&#xD;&#xA;&#x9;&#x9;&#x9;    .ToList()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    .ForEach(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        e =&gt;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            //Assign found activity to the DataRow&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            DataRow dr = temp.NewRow();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[0] = path;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[1] = e.Name.LocalName;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// dr[2]=e.Attribute(&quot;Name&quot;).Value;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]= e.Attribute(&quot;DisplayName&quot;).Value!=null ?&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;e.Attribute(&quot;DisplayName&quot;).Value : e.Parent.Attribute(&quot;DisplayName&quot;).Value&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   ;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (Exception ex)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]=e.AncestorsAndSelf() // Get the name of the activity&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .Where(x =&gt; x.Attribute(&quot;DisplayName&quot;) != null)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .First().Name.LocalName;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[3] = &quot;propriete simulate et sendwindows sont false &quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;XElement currentElement = e;&#xD;&#xA;&#x9;XAttribute idrefAttr = null;&#xD;&#xA;&#x9;&#x9;while (currentElement != null)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;    idrefAttr = currentElement.Attribute(sap2010 + &quot;WorkflowViewState.IdRef&quot;);&#xD;&#xA;&#x9;&#x9;    if (idrefAttr != null)&#xD;&#xA;&#x9;&#x9;    {&#xD;&#xA;&#x9;&#x9;        break;&#xD;&#xA;&#x9;&#x9;    }&#xD;&#xA;&#x9;&#x9;    currentElement = currentElement.Parent;&#xD;&#xA;&#x9;&#x9;}&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (idrefAttr != null)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;    string idrefValue = idrefAttr.Value;&#x9;    &#xD;&#xA;&#x9;&#x9;    dr[4] = idrefValue;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            temp.Rows.Add(dr);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        });&#xD;&#xA;&#xD;&#xA;&#x9;}catch(Exception e){ Console.WriteLine(e.ToString()); }&#xD;&#xA;&#xD;&#xA;/********************************* Get TypeInto Activities that have SimulateType not set to True*************************************/&#xD;&#xA;try{&#xD;&#xA;&#x9;&#x9;xDoc.Descendants(xNameSpace+&quot;TypeInto&quot;)&#xD;&#xA;&#x9;&#x9;&#x9;    .Where&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;        p =&gt;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(p.Attribute(&quot;SendWindowMessages&quot;) != null &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;&amp; (string.Compare(p.Attribute(&quot;SendWindowMessages&quot;).Value.ToString().ToLower(), &quot;true&quot; ) != 0)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;|| (p.Attribute(&quot;SimulateType&quot;) != null&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;&amp; (string.Compare(p.Attribute(&quot;SimulateType&quot;).Value.ToString().ToLower(), &quot;true&quot; ) != 0)&#xD;&#xA;&#x9;&#x9;                    &#x9;)&#xD;&#xA;&#x9;&#x9;&#x9;    )&#xD;&#xA;&#x9;&#x9;&#x9;    .ToList()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    .ForEach(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        e =&gt;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            //Assign found activity to the DataRow&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            DataRow dr = temp.NewRow();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[0] = path;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[1] = e.Name.LocalName;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]= e.Attribute(&quot;DisplayName&quot;).Value!=null ?&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;e.Attribute(&quot;DisplayName&quot;).Value : e.Parent.Attribute(&quot;DisplayName&quot;).Value&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   ;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (Exception ex)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]=e.AncestorsAndSelf() // Get the name of the activity&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .Where(x =&gt; x.Attribute(&quot;DisplayName&quot;) != null)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .First().Name.LocalName;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            dr[3] = &quot;propriete simulate et sendwindows sont false &quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;XElement currentElement = e;&#xD;&#xA;&#x9;XAttribute idrefAttr = null;&#xD;&#xA;&#x9;&#x9;while (currentElement != null)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;    idrefAttr = currentElement.Attribute(sap2010 + &quot;WorkflowViewState.IdRef&quot;);&#xD;&#xA;&#x9;&#x9;    if (idrefAttr != null)&#xD;&#xA;&#x9;&#x9;    {&#xD;&#xA;&#x9;&#x9;        break;&#xD;&#xA;&#x9;&#x9;    }&#xD;&#xA;&#x9;&#x9;    currentElement = currentElement.Parent;&#xD;&#xA;&#x9;&#x9;}&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (idrefAttr != null)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;    string idrefValue = idrefAttr.Value;&#x9;    &#xD;&#xA;&#x9;&#x9;    dr[4] = idrefValue;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;           &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;            temp.Rows.Add(dr);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        });&#xD;&#xA;&#xD;&#xA;&#x9;}catch(Exception e){Console.WriteLine(e.ToString()); }&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#xD;&#xA;/**Assign modified DataTable**/&#xD;&#xA;io_Dt = temp;&#xD;&#xA;/**Save File**/&#xD;&#xA;xDoc.Save(path);" DisplayName="Invoke code Gestion Simulate/SendWindows" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_file</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">DTGestionSelecteur</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10" xml:space="preserve">"      =&gt;debut invoke code Browser Type"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="string path=in_FilePath;&#xA;DataTable temp=io_Dt;&#xA;StreamReader sr = new StreamReader(path);&#xA;string xmlText = sr.ReadToEnd();&#xA;sr.Close();&#xA;XDocument xDoc = XDocument.Parse(xmlText);&#xA;XNamespace xNameSpace = &quot;http://schemas.uipath.com/workflow/activities&quot;;&#xA;XNamespace sap2010 = &quot;http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation&quot;;&#xA;/*{http://schemas.uipath.com/workflow/activities}BrowserScope&#xA;foreach (var elem in xDoc.Descendants(&quot;Variable&quot;))&#xA;{&#xA;    Console.WriteLine(elem.Attribute(&quot;Name&quot;).Value);&#xA;}*/&#xA;foreach (var elem in xDoc.Descendants(xNameSpace+&quot;BrowserScope&quot;))&#xA;{&#xA;&#x9;if( &#xA;&#x9;&#x9;!(elem.Attribute(&quot;BrowserType&quot;).Value.ToLower().Contains(&quot;edge&quot;)) &amp; &#xA;&#x9;&#x9;!(elem.Attribute(&quot;BrowserType&quot;).Value.ToLower().Contains(&quot;firefox&quot;))&#xA;&#x9;&#x9;) {&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;test&quot;);&#xA;&#x9;DataRow dr = temp.NewRow();&#xA;&#x9;dr[0]=path;&#xA;&#x9;dr[1] =&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                elem.AncestorsAndSelf() // Get the name of the activity&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .Where(x =&gt; x.Attribute(&quot;DisplayName&quot;) != null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .First().Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]= elem.Attribute(&quot;DisplayName&quot;).Value!=null ?&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   &#x9;elem.Attribute(&quot;DisplayName&quot;).Value : elem.Parent.Attribute(&quot;DisplayName&quot;).Value&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   ;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;catch (Exception ex)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    dr[2]=elem.AncestorsAndSelf() // Get the name of the activity&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .Where(x =&gt; x.Attribute(&quot;DisplayName&quot;) != null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;                    .First().Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[3]=&quot;propriete BrowserType  absente ou differente de edge ou de firefox &quot;;&#xA;&#x9;&#x9;&#x9;XElement currentElement = elem;&#xA;&#x9;XAttribute idrefAttr = null;&#xA;&#x9;&#x9;while (currentElement != null)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;    idrefAttr = currentElement.Attribute(sap2010 + &quot;WorkflowViewState.IdRef&quot;);&#xA;&#x9;&#x9;    if (idrefAttr != null)&#xA;&#x9;&#x9;    {&#xA;&#x9;&#x9;        break;&#xA;&#x9;&#x9;    }&#xA;&#x9;&#x9;    currentElement = currentElement.Parent;&#xA;&#x9;&#x9;}&#x9;&#x9;&#xA;&#x9;&#x9;if (idrefAttr != null)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;    string idrefValue = idrefAttr.Value;&#x9;    &#xA;&#x9;&#x9;    dr[4] = idrefValue;&#xA;&#x9;&#x9;}&#xA;&#x9;temp.Rows.Add(dr);&#xA;&#x9;}&#xA;}&#xA;/*&#xA;xDoc.Descendants().Elements().Where(p =&gt; (p.Attribute(&quot;BrowserType&quot;) !=null &amp;&amp; ( !(p.Attribute(&quot;BrowserType&quot;).Value.ToString().ToLower().Contains(&quot;edge&quot;)) |  !(p.Attribute(&quot;BrowserType&quot;).Value.ToString().ToLower().Contains(&quot;firefox&quot;)) )))&#xA;                         .ToList()&#xA;                         .ForEach(e =&gt; {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DataRow dr = temp.NewRow();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[0]=path;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;dr[1]=e.AncestorsAndSelf().Where(x=&gt;x.Attribute(&quot;DisplayName&quot;)!=null).First().Name.LocalName;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dr[2]=&quot;propriete BrowserType  absente ou differente de edge ou de firefox &quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; temp.Rows.Add(dr);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; });*/&#xA;io_Dt=temp;&#xA;xDoc.Save(path);&#xA;&#xA;&#xA;&#xA;" DisplayName="Invoke code Browser Type" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_file</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">DTGestionSelecteur</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="475.2,383.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="Data\Output\Report Code Review.xlsm">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelAppendRange DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_1" SheetName="Gestion Selecteur">
+                    <ui:ExcelAppendRange.DataTable>
+                      <InArgument x:TypeArguments="sd:DataTable">
+                        <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">DTGestionSelecteur</mca:CSharpValue>
+                      </InArgument>
+                    </ui:ExcelAppendRange.DataTable>
+                  </ui:ExcelAppendRange>
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+          </ui:ExcelApplicationScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:AppendRange DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="AppendRange_2" SheetName="Gestion Selecteur">
+      <ui:AppendRange.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">DTGestionSelecteur</mca:CSharpValue>
+        </InArgument>
+      </ui:AppendRange.DataTable>
+      <ui:AppendRange.WorkbookPath>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_DestFolder+"\\Report Code Review.xlsx"</mca:CSharpValue>
+        </InArgument>
+      </ui:AppendRange.WorkbookPath>
+    </ui:AppendRange>
+  </Sequence>
+</Activity>

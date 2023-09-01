@@ -1,0 +1,192 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GestionInputOutput" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Folder" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>649.333333333333,1656.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GestionInputOutput" sap:VirtualizedContainerService.HintSize="644.666666666667,1592" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_gestionInputOutput" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22" xml:space="preserve">"   =&gt;debut workflow Gestion des Input Output"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:BuildDataTable DisplayName="Build Data Table Gestion Packages" sap:VirtualizedContainerService.HintSize="582.666666666667,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Chemin&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Nom&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Action&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">DT_gestionInputOutput</mca:CSharpReference>
+        </OutArgument>
+      </ui:BuildDataTable.DataTable>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="/** ********************Unecessary Folders *************************** **/&#xD;&#xA;System.Data.DataTable temp = io_Dt;&#xD;&#xA;&#xD;&#xA;// get all the unecessary folders to be deleted&#xD;&#xA;var foldersToDelete = Directory.GetDirectories(in_folder, &quot;*&quot;, SearchOption.AllDirectories)&#xD;&#xA;    .Where(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dir =&gt; &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;        dir.StartsWith(in_folder + &quot;\\Data\\Input&quot;) || &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;            dir.StartsWith(in_folder + &quot;\\Data\\Output&quot;) || &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;            dir.StartsWith(in_folder + &quot;\\Data\\Temp&quot;) ||  &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;            dir.EndsWith(&quot;.screenshots&quot;) ||  &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;            dir.EndsWith(&quot;Exceptions_Screenshots&quot;) ||  &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;            dir.EndsWith(&quot;Tests&quot;) ||  &#xD;&#xA;            &#x9;&#x9;&#x9;&#x9;&#x9;dir.EndsWith(&quot;Documentation&quot;))&#xD;&#xA;&#x9;.Select(dir =&gt; dir.TrimEnd('\\'));&#xD;&#xA;&#xD;&#xA;//Add folders to delete into the report excel file &#xD;&#xA;foreach (var folder in foldersToDelete)&#xD;&#xA;{&#xD;&#xA;    DataRow dr = temp.NewRow();&#xD;&#xA;    dr[0] = folder;&#xD;&#xA;&#x9;dr[1] = Path.GetFileName(folder); &#xD;&#xA;    dr[2] = &quot;Doit être supprimé&quot;;&#xD;&#xA;    temp.Rows.Add(dr);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;io_Dt = temp;&#xD;&#xA;&#xD;&#xA;//********************************************************************************************************************//&#xD;&#xA;//********************************************************************************************************************//&#xD;&#xA;//********************************** MISPLACED FILES (in project root) ********************************************//&#xD;&#xA;//*******************************************************************************************************************//&#xD;&#xA;//*******************************************************************************************************************//&#xD;&#xA;&#xD;&#xA;//get the files that doesn't have to be in root of project&#xD;&#xA;var rootFiles = Directory.GetFiles(in_folder)&#xD;&#xA;    .Where(file =&gt;&#xD;&#xA;        !file.EndsWith(&quot;\\Main.xaml&quot;, StringComparison.OrdinalIgnoreCase) &amp;&amp;&#xD;&#xA;&#x9;    !file.EndsWith(&quot;\\Process.xaml&quot;, StringComparison.OrdinalIgnoreCase) &amp;&amp;&#xD;&#xA;        !file.EndsWith(&quot;\\License&quot;, StringComparison.OrdinalIgnoreCase) &amp;&amp;&#xD;&#xA;        !file.EndsWith(&quot;\\project.json&quot;, StringComparison.OrdinalIgnoreCase) &amp;&amp;&#xD;&#xA;        !file.EndsWith(&quot;\\readme.md&quot;, StringComparison.OrdinalIgnoreCase)&#xD;&#xA;    );&#xD;&#xA;&#xD;&#xA;//Add found files to the report excel file &#xD;&#xA;foreach (var file in rootFiles)&#xD;&#xA;{&#xD;&#xA;    DataRow dr = temp.NewRow();&#xD;&#xA;    dr[0] = file;&#xD;&#xA;&#x9;dr[1] = Path.GetFileName(file); // Get the file name&#xD;&#xA;    dr[2] = &quot;Fichier doit etre déplacé dans Data&quot;;&#xD;&#xA;    temp.Rows.Add(dr);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;io_Dt = temp;&#xD;&#xA;" DisplayName="Invoke code Misplaced folders/Files" sap:VirtualizedContainerService.HintSize="582.666666666667,165.333333333333" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_folder">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">in_Folder</mca:CSharpValue>
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">DT_gestionInputOutput</mca:CSharpReference>
+        </InOutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">"Invoke code Gestion Du invoke workflow Clear/CreateTempFolder"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="582.666666666667,612" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="file" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="546,472" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If sap:VirtualizedContainerService.HintSize="484,361.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">file.ToString().Contains("Main")</mca:CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <ui:InvokeCode ContinueOnError="{x:Null}" Code="try{&#xA;&#x9;string path = FilePath;&#xA;XDocument xDoc = XDocument.Load(path);&#xA;DataTable temp = io_Dt;&#xA;bool CreateTempFile=false;&#xA;bool DeleteTempFile=false;&#xA;XNamespace uiNameSpace = &quot;http://schemas.uipath.com/workflow/activities&quot;;&#xA;XNamespace xNameSpace=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;;&#xA;XNamespace node=&quot;http://schemas.microsoft.com/netfx/2009/xaml/activities&quot;;&#xA;var variables = xDoc.Descendants(uiNameSpace + &quot;InvokeWorkflowFile&quot;);&#xA;&#xA;foreach (var variable in variables)&#xA;{&#xA;  if(variable.Attribute(&quot;DisplayName&quot;).Value.Contains(&quot;CreateTempFolder&quot;)){&#xA;  &#x9;CreateTempFile=true;&#xA;&#x9;  break;&#xA;  }&#xA;}&#xA;&#xA;foreach (var variable in variables)&#xA;{&#xA;  if(variable.Attribute(&quot;DisplayName&quot;).Value.Contains(&quot;ClearTempFolder&quot;)){&#xA;  &#x9;DeleteTempFile=true;&#xA;&#x9;  break;&#xA;  }&#xA;}&#xA;&#xA;if(!DeleteTempFile){&#xA;&#x9;DataRow dr = temp.NewRow();&#xA;&#x9;dr[1] = path;&#xA;    dr[2] = &quot;ClearTempFolder&quot;;&#xA;&#x9;dr[3] = &quot;ClearTempFolder doit etre ajouter&quot;;&#xA;    temp.Rows.Add(dr);&#xA;}&#xA;&#xA;// Enregistrer les modifications apportées à la DataTable et au fichier XAML&#xA;io_Dt = temp;&#xA;xDoc.Save(path);&#xA;&#xA;if(!CreateTempFile){&#xA;&#x9;DataRow dr = temp.NewRow();&#xA;&#x9;&#x9; dr[1] = path;&#xA;    dr[2] = &quot;CreateTempFolder&quot;;&#xA;&#x9; dr[3] = &quot;CreateTempFolder doit etre ajouter&quot;;&#xA;    temp.Rows.Add(dr);&#xA;}&#xA;&#xA;// Enregistrer les modifications apportées à la DataTable et au fichier XAML&#xA;io_Dt = temp;&#xA;xDoc.Save(path);&#xA;&#xA;&#xA;}catch(Exception e){&#xA;&#x9;Console.WriteLine(e.Message.ToString());&#xA;}&#xA;" DisplayName="Invoke code Gestion dossier Temp" sap:VirtualizedContainerService.HintSize="334,165.333333333333" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                  <ui:InvokeCode.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="FilePath">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">file.ToString()</mca:CSharpValue>
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_Dt">
+                      <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">DT_gestionInputOutput</mca:CSharpReference>
+                    </InOutArgument>
+                  </ui:InvokeCode.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeCode>
+              </If.Then>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <ui:ForEach.Values>
+        <InArgument x:TypeArguments="sc:IEnumerable">
+          <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">Directory.GetFiles(in_Folder,"*.xaml",SearchOption.AllDirectories)</mca:CSharpValue>
+        </InArgument>
+      </ui:ForEach.Values>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+    <ui:AppendRange DisplayName="Append Range for DT_GestionInputOutput" sap:VirtualizedContainerService.HintSize="582.666666666667,116" sap2010:WorkflowViewState.IdRef="AppendRange_2" SheetName="Gestion InputOutput" WorkbookPath="Data\Output\Report Code Review.xlsx">
+      <ui:AppendRange.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">DT_gestionInputOutput</mca:CSharpValue>
+        </InArgument>
+      </ui:AppendRange.DataTable>
+    </ui:AppendRange>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582.666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21" xml:space="preserve">"   =&gt;fin workflow Gestion des Input Output "</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
